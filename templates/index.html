@@ -30,6 +30,19 @@
           </ul>
         </div> -->
     <!-- End your project here-->'
-{% include "scripts.html" %}    
+    {% include "scripts.html" %}   
+    
+
+{% if email_sent == 1 %}
+{% include "email-confirm-modal.html" %}
+        <script>
+         $("#modal-toggle").click();
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+          }
+        </script>
+        
+{% endif %}
+ 
   </body>
 </html>

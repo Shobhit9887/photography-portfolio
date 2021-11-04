@@ -11,6 +11,7 @@ def home(request):
     filtered = (x for x in images if x.isHighlight==True)
     print(images)
     context['images'] = filtered
+    context['email_sent'] = 0
 
     if request.method == "POST":
         name = request.POST.get('name')
@@ -25,8 +26,10 @@ def home(request):
             headers = {"Reply-To": email}
         )
 
-        email_messsage.send()
-
+        sent = email_messsage.send()
+        if(sent == 1):
+            context['email_sent'] = 1
+            
     return render(request, "index.html", context)
 
 def ItemView(request):
