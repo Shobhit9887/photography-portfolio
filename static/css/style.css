@@ -6,9 +6,9 @@ html, body{
     width: 100%;
     height: auto;
 }
-.highlight-item{            
-    width: 100%;
-    height: auto;
+.highlight-item{
+    height: 4rem;
+    width: auto;
 }
 .about, .contact{
     min-height: 70vh;
