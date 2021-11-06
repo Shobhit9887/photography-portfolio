@@ -7,7 +7,7 @@ html, body{
     height: auto;
 }
 .highlight-item{
-    height: 4rem;
+    height: 120px;
     width: auto;
 }
 .about, .contact{
